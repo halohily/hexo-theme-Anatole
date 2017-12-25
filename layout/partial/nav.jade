@@ -2,24 +2,19 @@
   .nav
     li
       if is_home()
-        a.current(href="/")= __('Home')					
+        a.current(href="/")= __('首页')					
       else
-        a(href="/")= __('Home')	
+        a(href="/")= __('首页')	
     li
-      if is_current('about')
-        a.current(href="/about")= __('About')			
+      if is_current('关于')
+        a.current(href="/about")= __('关于')			
       else
-        a(href="/about")= __('About')
+        a(href="/about")= __('关于')
     li
       if is_archive()
-        a.current(href="/archives")= __('Archive')
+        a.current(href="/archives")= __('速览')
       else
-        a(href="/archives")= __('Archive')
-    li
-      if is_current('links')
-        a.current(href="/links")= __('Links')					
-      else
-        a(href="/links")= __('Links')		
+        a(href="/archives")= __('速览')
   .information
     .back_btn
       li
@@ -27,5 +22,3 @@
           a.fa.fa-chevron-left(onclick="window.history.go(-1)") 
         else
           a.fa.fa-chevron-left(onclick="window.history.go(-1)",style="display:none;") 
-    .avatar
-      img(src=theme.avatar)
